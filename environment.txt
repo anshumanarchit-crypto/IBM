@@ -1,0 +1,65 @@
+SIGNALGATE ENVIRONMENT PROBE
+Probe time UTC: 2026-10-17T06:58:01.318184+00:00
+
+== Python and operating system ==
+Python version: 3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]
+Python executable: C:\Users\archi\OneDrive\Desktop\SignalGate\.venv\Scripts\python.exe
+Platform: Windows-11-10.0.26200-SP0
+Architecture: AMD64
+Operating system: Windows
+
+== Command probes ==
+uname -m:
+(command not installed)
+
+lscpu:
+(command not installed)
+
+== Python dependencies ==
+pydantic:
+  version: 2.14.1
+  module: available
+PyYAML:
+  version: 6.0.3
+  module: available
+pytest:
+  version: 8.4.2
+  module: available
+numpy:
+  version: 2.5.4
+  module: available
+pandas:
+  version: 3.0.6
+  module: available
+scikit-learn:
+  version: not installed
+  module: not found
+scipy:
+  version: 1.18.1
+  module: available
+cryptography:
+  version: not installed
+  module: not found
+langgraph:
+  version: not installed
+  module: not found
+llama-cpp-python:
+  version: not installed
+  module: not found
+streamlit:
+  version: not installed
+  module: not found
+
+== llama.cpp executable probes ==
+llama-cli: not found
+llama-server: not found
+
+== IBM Secure Execution indicators ==
+prot_virt_guest: not available
+/dev/uv exists: False
+
+== Interpretation limits ==
+A missing indicator does not prove that all TEE capability is absent.
+An indicator value alone is not explicit remote attestation.
+This script does not perform or claim hardware attestation.
+A detected package or executable does not establish benchmark performance.
