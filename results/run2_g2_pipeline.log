@@ -1,0 +1,43 @@
+============================================================
+SignalGate Gate G2: Ensemble + Calibration + Signals Pipeline
+============================================================
+
+G1 B2@1.5x validation recall (provenance): 0.5710819990295973
+
+1. Loading and partitioning data (read-only, same G1 split)...
+  Train rows: 354324, Calibration rows: 59054, Validation rows: 59054
+  Train prevalence: 3.3833%
+
+2. Fitting FeaturePipeline on train partition...
+  Feature pipeline fitted in 0.32s  (391 features)
+  X_train: (354324, 391), X_cal: (59054, 391), X_val: (59054, 391)
+
+3. Fitting HeterogeneousEnsemble on train partition...
+  Ensemble fitted in 856.42s  (7 members: ['hgbc_s11', 'hgbc_s22', 'hgbc_s33', 'hgbc_s44', 'hgbc_s55', 'et_s11', 'lr_s11'])
+
+4. Computing ensemble scores on calibration partition...
+
+5. Fitting calibrators on calibration partition...
+  PlattCalibrator fitted.
+  IsotonicCalibrator fitted.
+  ECE (calibration set) � Raw: 0.1955, Platt: 0.0063, Isotonic: 0.0000
+
+6. Computing ensemble scores and disagreement signals on validation...
+  u  (std): mean=0.0931, median=0.0772, p95=0.2152
+  u2 (MAD): mean=0.0571, median=0.0483, p95=0.1267
+
+7. Validation ablation: E1 (raw), E2 (Platt), E3 (Isotonic) vs B2@1.5x...
+  E1_ensemble_raw: recall=58.42%, precision=40.17%, pr_auc=0.5454, detected=1204, missed=857
+  E2_ensemble_platt: recall=58.42%, precision=40.17%, pr_auc=0.5454, detected=1204, missed=857
+  E3_ensemble_isotonic: recall=58.27%, precision=40.07%, pr_auc=0.5308, detected=1201, missed=860
+  E2 (1.0x): recall=51.14%, touched=3.38%, precision=52.75%
+  E2 (1.5x (PRIMARY)): recall=58.42%, touched=5.08%, precision=40.17%
+  E2 (2.0x): recall=64.63%, touched=6.77%, precision=33.33%
+  E2 (3.0x): recall=71.62%, touched=10.15%, precision=24.62%
+
+  LogisticRegression (lr_s11) diagnostics:
+    Solver: lbfgs, max_iter: 2000, n_iter: 419
+    Converged: True, Warning status: zero_warnings
+
+G2 report saved to: C:\Users\archi\OneDrive\Desktop\SignalGate\results\g2_ensemble_report.json
+============================================================

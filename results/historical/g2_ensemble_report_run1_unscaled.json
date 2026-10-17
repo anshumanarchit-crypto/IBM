@@ -1,0 +1,148 @@
+{
+  "gate": "G2",
+  "timestamp_utc": "2026-10-17T09:23:24Z",
+  "train_prevalence": 0.03383344057980831,
+  "ensemble": {
+    "n_members": 7,
+    "member_ids": [
+      "hgbc_s11",
+      "hgbc_s22",
+      "hgbc_s33",
+      "hgbc_s44",
+      "hgbc_s55",
+      "et_s11",
+      "lr_s11"
+    ],
+    "fit_duration_seconds": 342.1814079284668
+  },
+  "calibration": {
+    "method": [
+      "sigmoid_platt",
+      "isotonic"
+    ],
+    "fitted_on": "calibration_partition",
+    "ece_raw": 0.20737747258148437,
+    "ece_platt": 0.006143331597070369,
+    "ece_isotonic": 3.959906864864923e-15
+  },
+  "disagreement_signals": {
+    "u_mean": 0.11338901979643844,
+    "u_median": 0.10788098044993413,
+    "u_p95": 0.21542288869734158,
+    "u2_mean": 0.06748785053623473,
+    "u2_median": 0.06329854664702302,
+    "u2_p95": 0.12781312119575916,
+    "n_members": 7
+  },
+  "validation_ablation": [
+    {
+      "variant": "E1_ensemble_raw",
+      "budget_multiple": 1.5,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 2997,
+        "touched_rate": 0.050750160869712464,
+        "detected_fraud": 1198,
+        "missed_fraud": 863,
+        "recall": 0.5812712275594372,
+        "precision": 0.39973306639973305,
+        "pr_auc": 0.5443857211619131
+      }
+    },
+    {
+      "variant": "E2_ensemble_platt",
+      "budget_multiple": 1.5,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 2997,
+        "touched_rate": 0.050750160869712464,
+        "detected_fraud": 1198,
+        "missed_fraud": 863,
+        "recall": 0.5812712275594372,
+        "precision": 0.39973306639973305,
+        "pr_auc": 0.5443857211619131
+      }
+    },
+    {
+      "variant": "E3_ensemble_isotonic",
+      "budget_multiple": 1.5,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 2997,
+        "touched_rate": 0.050750160869712464,
+        "detected_fraud": 1186,
+        "missed_fraud": 875,
+        "recall": 0.5754488112566715,
+        "precision": 0.3957290623957291,
+        "pr_auc": 0.5291342137417875
+      }
+    }
+  ],
+  "e2_budget_sweep_validation": {
+    "1.0": {
+      "variant": "E2_ensemble_platt",
+      "budget_multiple": 1.0,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 1998,
+        "touched_rate": 0.03383344057980831,
+        "detected_fraud": 1050,
+        "missed_fraud": 1011,
+        "recall": 0.5094614264919942,
+        "precision": 0.5255255255255256,
+        "pr_auc": 0.5443857211619131
+      }
+    },
+    "1.5": {
+      "variant": "E2_ensemble_platt",
+      "budget_multiple": 1.5,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 2997,
+        "touched_rate": 0.050750160869712464,
+        "detected_fraud": 1198,
+        "missed_fraud": 863,
+        "recall": 0.5812712275594372,
+        "precision": 0.39973306639973305,
+        "pr_auc": 0.5443857211619131
+      }
+    },
+    "2.0": {
+      "variant": "E2_ensemble_platt",
+      "budget_multiple": 2.0,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 3996,
+        "touched_rate": 0.06766688115961662,
+        "detected_fraud": 1318,
+        "missed_fraud": 743,
+        "recall": 0.6394953905870936,
+        "precision": 0.32982982982982983,
+        "pr_auc": 0.5443857211619131
+      }
+    },
+    "3.0": {
+      "variant": "E2_ensemble_platt",
+      "budget_multiple": 3.0,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 5994,
+        "touched_rate": 0.10150032173942493,
+        "detected_fraud": 1476,
+        "missed_fraud": 585,
+        "recall": 0.7161572052401747,
+        "precision": 0.24624624624624625,
+        "pr_auc": 0.5443857211619131
+      }
+    }
+  },
+  "g1_b2_val_recall_provenance": 0.5710819990295973,
+  "g1_report_timestamp_provenance": "2026-10-17T08:36:34Z"
+}

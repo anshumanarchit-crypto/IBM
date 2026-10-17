@@ -1,0 +1,135 @@
+{
+  "gate": "G1",
+  "timestamp_utc": "2026-10-17T08:36:34Z",
+  "train_prevalence": 0.03383344057980831,
+  "feature_count": 391,
+  "fit_duration_seconds": 19.423012256622314,
+  "b1_fixed_threshold": {
+    "threshold": 0.6936270423353007,
+    "target_rate": 0.05075016086971247,
+    "validation": {
+      "total_cases": 59054,
+      "total_fraud": 2061,
+      "reviewed_cases": 2997,
+      "touched_rate": 0.050750160869712464,
+      "detected_fraud": 1177,
+      "missed_fraud": 884,
+      "recall": 0.5710819990295973,
+      "precision": 0.39272605939272603,
+      "pr_auc": 0.5234448188954062
+    },
+    "test": {
+      "total_cases": 118108,
+      "total_fraud": 4064,
+      "reviewed_cases": 6718,
+      "touched_rate": 0.05688014359738544,
+      "detected_fraud": 2138,
+      "missed_fraud": 1926,
+      "recall": 0.5260826771653543,
+      "precision": 0.3182494790116106,
+      "pr_auc": 0.4521648135282874
+    }
+  },
+  "b2_top_budget_ranking": {
+    "1.0": {
+      "budget_multiple": 1.0,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 1998,
+        "touched_rate": 0.03383344057980831,
+        "detected_fraud": 1015,
+        "missed_fraud": 1046,
+        "recall": 0.492479378942261,
+        "precision": 0.508008008008008,
+        "pr_auc": 0.5234448188954062
+      },
+      "test": {
+        "total_cases": 118108,
+        "total_fraud": 4064,
+        "reviewed_cases": 3996,
+        "touched_rate": 0.03383344057980831,
+        "detected_fraud": 1769,
+        "missed_fraud": 2295,
+        "recall": 0.43528543307086615,
+        "precision": 0.4426926926926927,
+        "pr_auc": 0.4521648135282874
+      }
+    },
+    "1.5": {
+      "budget_multiple": 1.5,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 2997,
+        "touched_rate": 0.050750160869712464,
+        "detected_fraud": 1177,
+        "missed_fraud": 884,
+        "recall": 0.5710819990295973,
+        "precision": 0.39272605939272603,
+        "pr_auc": 0.5234448188954062
+      },
+      "test": {
+        "total_cases": 118108,
+        "total_fraud": 4064,
+        "reviewed_cases": 5994,
+        "touched_rate": 0.050750160869712464,
+        "detected_fraud": 2053,
+        "missed_fraud": 2011,
+        "recall": 0.5051673228346457,
+        "precision": 0.3425091758425092,
+        "pr_auc": 0.4521648135282874
+      }
+    },
+    "2.0": {
+      "budget_multiple": 2.0,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 3996,
+        "touched_rate": 0.06766688115961662,
+        "detected_fraud": 1291,
+        "missed_fraud": 770,
+        "recall": 0.626394953905871,
+        "precision": 0.3230730730730731,
+        "pr_auc": 0.5234448188954062
+      },
+      "test": {
+        "total_cases": 118108,
+        "total_fraud": 4064,
+        "reviewed_cases": 7992,
+        "touched_rate": 0.06766688115961662,
+        "detected_fraud": 2253,
+        "missed_fraud": 1811,
+        "recall": 0.5543799212598425,
+        "precision": 0.2819069069069069,
+        "pr_auc": 0.4521648135282874
+      }
+    },
+    "3.0": {
+      "budget_multiple": 3.0,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 5994,
+        "touched_rate": 0.10150032173942493,
+        "detected_fraud": 1448,
+        "missed_fraud": 613,
+        "recall": 0.7025715672003882,
+        "precision": 0.2415749082415749,
+        "pr_auc": 0.5234448188954062
+      },
+      "test": {
+        "total_cases": 118108,
+        "total_fraud": 4064,
+        "reviewed_cases": 11988,
+        "touched_rate": 0.10150032173942493,
+        "detected_fraud": 2575,
+        "missed_fraud": 1489,
+        "recall": 0.6336122047244095,
+        "precision": 0.21479813146479812,
+        "pr_auc": 0.4521648135282874
+      }
+    }
+  }
+}

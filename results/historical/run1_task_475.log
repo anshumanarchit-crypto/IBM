@@ -1,0 +1,55 @@
+.\.venv\Scripts\python.exe : 
+C:\Users\archi\OneDrive\Desktop\SignalGate\.venv\Lib\site-packages\sklearn\linear_model\_logistic.py:599: 
+ConvergenceWarning: lbfgs failed to converge after 1000 iteration(s) (status=1):
+At line:1 char:1
++ .\.venv\Scripts\python.exe scripts\run_g2_eval.py 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\archi\...(s) (status=1)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+Increase the number of iterations to improve the convergence (max_iter=1000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+============================================================
+SignalGate Gate G2: Ensemble + Calibration + Signals Pipeline
+============================================================
+
+G1 B2@1.5x validation recall (provenance): 0.5710819990295973
+
+1. Loading and partitioning data (read-only, same G1 split)...
+  Train rows: 354324, Calibration rows: 59054, Validation rows: 59054
+  Train prevalence: 3.3833%
+
+2. Fitting FeaturePipeline on train partition...
+  Feature pipeline fitted in 0.24s  (391 features)
+  X_train: (354324, 391), X_cal: (59054, 391), X_val: (59054, 391)
+
+3. Fitting HeterogeneousEnsemble on train partition...
+  Ensemble fitted in 342.18s  (7 members: ['hgbc_s11', 'hgbc_s22', 'hgbc_s33', 'hgbc_s44', 'hgbc_s55', 'et_s11', 'lr_s11'])
+
+4. Computing ensemble scores on calibration partition...
+
+5. Fitting calibrators on calibration partition...
+  PlattCalibrator fitted.
+  IsotonicCalibrator fitted.
+  ECE (calibration set) � Raw: 0.2074, Platt: 0.0061, Isotonic: 0.0000
+
+6. Computing ensemble scores and disagreement signals on validation...
+  u  (std): mean=0.1134, median=0.1079, p95=0.2154
+  u2 (MAD): mean=0.0675, median=0.0633, p95=0.1278
+
+7. Validation ablation: E1 (raw), E2 (Platt), E3 (Isotonic) vs B2@1.5x...
+  E1_ensemble_raw: recall=58.13%, precision=39.97%, pr_auc=0.5444, detected=1198, missed=863
+  E2_ensemble_platt: recall=58.13%, precision=39.97%, pr_auc=0.5444, detected=1198, missed=863
+  E3_ensemble_isotonic: recall=57.54%, precision=39.57%, pr_auc=0.5291, detected=1186, missed=875
+  E2 (1.0x): recall=50.95%, touched=3.38%, precision=52.55%
+  E2 (1.5x (PRIMARY)): recall=58.13%, touched=5.08%, precision=39.97%
+  E2 (2.0x): recall=63.95%, touched=6.77%, precision=32.98%
+  E2 (3.0x): recall=71.62%, touched=10.15%, precision=24.62%
+
+G2 report saved to: C:\Users\archi\OneDrive\Desktop\SignalGate\results\g2_ensemble_report.json
+============================================================

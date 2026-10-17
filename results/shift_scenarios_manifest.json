@@ -1,0 +1,57 @@
+{
+  "title": "SignalGate Shift Scenarios Manifest (Gate G4)",
+  "scenarios": {
+    "S0": {
+      "scenario_id": "S0",
+      "name": "Original Chronological Test Set",
+      "description": "Full 20% chronological test partition (118,108 transactions).",
+      "source_partition": "test",
+      "is_synthetic": false,
+      "random_seed": null,
+      "dt_min": 12192900,
+      "dt_max": 15811131,
+      "expected_row_count": 118108,
+      "governance_notes": "Historical baseline metrics were previously recorded in Gate G1 artifacts. Preserves historical record; strictly quarantined against tuning, feature selection, or proposal ranking.",
+      "data_use_rules": "Quarantined benchmark only. Models and policies must never be tuned on S0."
+    },
+    "S1": {
+      "scenario_id": "S1",
+      "name": "Late-Period Chronological Test Scenario",
+      "description": "Final chronological portion of the test period defined by TransactionDT >= 14,800,000 (approximately the final 28% of the test timeline).",
+      "source_partition": "test",
+      "is_synthetic": false,
+      "random_seed": null,
+      "dt_min": 14800000,
+      "dt_max": 15811131,
+      "expected_row_count": null,
+      "governance_notes": "Pre-registered late-period scenario testing long-horizon temporal degradation. Defined strictly in advance by time boundary, without label inspection.",
+      "data_use_rules": "Evaluated only at final system evaluation gate; zero tuning allowed."
+    },
+    "S2": {
+      "scenario_id": "S2",
+      "name": "Constructed Real-Data Shift (Validation Window Slice)",
+      "description": "Late chronological half of the validation partition (TransactionDT >= 11,315,422). Constructed from real transactions held out from model training and calibration.",
+      "source_partition": "validation",
+      "is_synthetic": false,
+      "random_seed": null,
+      "dt_min": 11315422,
+      "dt_max": 12192842,
+      "expected_row_count": 29527,
+      "governance_notes": "Constructed purely from real transactions within the permitted validation partition. Zero exposure to the test partition.",
+      "data_use_rules": "Permitted for replay gate testing, sentinel trigger validation, and threshold verification."
+    },
+    "S3": {
+      "scenario_id": "S3",
+      "name": "Synthetic Perturbation Scenario",
+      "description": "Controlled synthetic stress test applying deterministic feature scaling and Gaussian noise injection (seed=42) to validation partition features.",
+      "source_partition": "validation",
+      "is_synthetic": true,
+      "random_seed": 42,
+      "dt_min": 10438003,
+      "dt_max": 12192842,
+      "expected_row_count": 59054,
+      "governance_notes": "Deterministic synthetic perturbation. MUST be labeled synthetic, never natural drift. Does not constitute proof of robustness against all real-world shifts.",
+      "data_use_rules": "Permitted for invariant testing, Red-Teamer evaluations, and replay verification."
+    }
+  }
+}

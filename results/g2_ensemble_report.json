@@ -1,0 +1,169 @@
+{
+  "gate": "G2",
+  "run_id": "run_2_corrected",
+  "timestamp_utc": "2026-10-17T09:58:58Z",
+  "partition_verification": {
+    "train_hash": "ee8c38fd7e8b2af1b93a7824fd80f59c7811e5ce2ac1651500d51bf6e2e1f53a",
+    "calibration_hash": "a1880e4f36558c33d77d0a1a2cf6b1dfe607a4983909364afff71ca84401e7bb",
+    "validation_hash": "f824d80aea2e20f72e4ed8f06e6d119c7572caf50cf304dfb4224e8d990e7170",
+    "test_partition_loaded": false,
+    "test_labels_loaded": false
+  },
+  "train_prevalence": 0.03383344057980831,
+  "ensemble": {
+    "n_members": 7,
+    "member_ids": [
+      "hgbc_s11",
+      "hgbc_s22",
+      "hgbc_s33",
+      "hgbc_s44",
+      "hgbc_s55",
+      "et_s11",
+      "lr_s11"
+    ],
+    "fit_duration_seconds": 856.4182894229889,
+    "lr_member_diagnostics": {
+      "member_id": "lr_s11",
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "n_iter": 419,
+      "converged": true,
+      "has_median_imputer": true,
+      "has_standard_scaler": true,
+      "imputer_fitted_on": "train_partition_only",
+      "scaler_fitted_on": "train_partition_only",
+      "warning_status": "zero_warnings"
+    }
+  },
+  "calibration": {
+    "method": [
+      "sigmoid_platt",
+      "isotonic"
+    ],
+    "fitted_on": "calibration_partition",
+    "ece_raw": 0.19546785096112934,
+    "ece_platt": 0.0062672213436516,
+    "ece_isotonic": 1.3080776753143305e-15
+  },
+  "disagreement_signals": {
+    "u_mean": 0.0931033270445097,
+    "u_median": 0.07723768354227449,
+    "u_p95": 0.21522655556314121,
+    "u2_mean": 0.05706927883286666,
+    "u2_median": 0.04825966738955485,
+    "u2_p95": 0.126709137358077,
+    "n_members": 7
+  },
+  "validation_ablation": [
+    {
+      "variant": "E1_ensemble_raw",
+      "budget_multiple": 1.5,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 2997,
+        "touched_rate": 0.050750160869712464,
+        "detected_fraud": 1204,
+        "missed_fraud": 857,
+        "recall": 0.58418243571082,
+        "precision": 0.40173506840173506,
+        "pr_auc": 0.5454104090382492
+      }
+    },
+    {
+      "variant": "E2_ensemble_platt",
+      "budget_multiple": 1.5,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 2997,
+        "touched_rate": 0.050750160869712464,
+        "detected_fraud": 1204,
+        "missed_fraud": 857,
+        "recall": 0.58418243571082,
+        "precision": 0.40173506840173506,
+        "pr_auc": 0.5454104090382492
+      }
+    },
+    {
+      "variant": "E3_ensemble_isotonic",
+      "budget_multiple": 1.5,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 2997,
+        "touched_rate": 0.050750160869712464,
+        "detected_fraud": 1201,
+        "missed_fraud": 860,
+        "recall": 0.5827268316351286,
+        "precision": 0.4007340674007341,
+        "pr_auc": 0.530782616658638
+      }
+    }
+  ],
+  "e2_budget_sweep_validation": {
+    "1.0": {
+      "variant": "E2_ensemble_platt",
+      "budget_multiple": 1.0,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 1998,
+        "touched_rate": 0.03383344057980831,
+        "detected_fraud": 1054,
+        "missed_fraud": 1007,
+        "recall": 0.5114022319262493,
+        "precision": 0.5275275275275275,
+        "pr_auc": 0.5454104090382492
+      }
+    },
+    "1.5": {
+      "variant": "E2_ensemble_platt",
+      "budget_multiple": 1.5,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 2997,
+        "touched_rate": 0.050750160869712464,
+        "detected_fraud": 1204,
+        "missed_fraud": 857,
+        "recall": 0.58418243571082,
+        "precision": 0.40173506840173506,
+        "pr_auc": 0.5454104090382492
+      }
+    },
+    "2.0": {
+      "variant": "E2_ensemble_platt",
+      "budget_multiple": 2.0,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 3996,
+        "touched_rate": 0.06766688115961662,
+        "detected_fraud": 1332,
+        "missed_fraud": 729,
+        "recall": 0.6462882096069869,
+        "precision": 0.3333333333333333,
+        "pr_auc": 0.5454104090382492
+      }
+    },
+    "3.0": {
+      "variant": "E2_ensemble_platt",
+      "budget_multiple": 3.0,
+      "validation": {
+        "total_cases": 59054,
+        "total_fraud": 2061,
+        "reviewed_cases": 5994,
+        "touched_rate": 0.10150032173942493,
+        "detected_fraud": 1476,
+        "missed_fraud": 585,
+        "recall": 0.7161572052401747,
+        "precision": 0.24624624624624625,
+        "pr_auc": 0.5454104090382492
+      }
+    }
+  },
+  "g1_b2_val_recall_provenance": 0.5710819990295973,
+  "g1_report_timestamp_provenance": "2026-10-17T08:36:34Z",
+  "audit_note": "Run 2 with StandardScaler fitted on train partition only; zero ConvergenceWarning emitted; exit code 0."
+}

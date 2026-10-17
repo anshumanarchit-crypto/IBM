@@ -1,0 +1,26 @@
+{
+  "smoke_sample_size": 10000,
+  "seed_only_near_zero_disagreement_pct": 2.8400000000000003,
+  "heterogeneous_near_zero_disagreement_pct": 0.05,
+  "spearman_correlation_p_vs_u": 0.9065573858795574,
+  "spearman_correlation_p_vs_u2": 0.9049034482187699,
+  "paired_bootstrap_recall_difference": {
+    "variant_evaluated": "E2_ensemble_platt vs B2_baseline",
+    "budget_multiple": 1.5,
+    "validation_cases": 59054,
+    "validation_fraud": 2061,
+    "reviewed_budget": 2997,
+    "e2_val_recall": 0.581271,
+    "b2_val_recall": 0.571082,
+    "delta_recall_mean": 0.010370208636584182,
+    "ci_95_lower": 0.0019408054342552159,
+    "ci_95_upper": 0.018437651625424552,
+    "significant_positive": true,
+    "keep_or_drop_rule": "RETAINED"
+  },
+  "signal_statuses": {
+    "disagreement_u": "ok",
+    "disagreement_u2": "ok",
+    "p5_candidate_status": "RETAINED"
+  }
+}

@@ -76,16 +76,28 @@ Thumbs.db
 ehthumbs.db
 desktop.ini
 
-# Large Data & Model Binaries (preserve directory structure via .gitkeep)
-data/*
-!data/.gitkeep
-results/*
-!results/.gitkeep
-figs/*
-!figs/.gitkeep
+# Large Raw Datasets (IEEE-CIS CSV files ~1.3GB)
+data/raw/*.csv
+*.csv
+
+# Model Binaries & Heavy Weights (preserve code and JSON configs)
 *.pkl
 *.joblib
 *.pt
 *.pth
 *.onnx
 *.bin
+
+# Preserve directory structure and code
+!data/.gitkeep
+!data/*.py
+!results/.gitkeep
+!results/*.json
+!results/*.jsonl
+!results/*.log
+!figs/.gitkeep
+# Reproduction run scratch outputs
+results/reproduction_run/
+
+# Temporary patch extraction directory
+SignalGate_G0_core_patch/

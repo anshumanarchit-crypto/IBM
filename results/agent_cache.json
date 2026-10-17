@@ -1,0 +1,2121 @@
+{
+  "cache_version": "SignalGate-G6-AgentCache-v1.0",
+  "description": "Pre-verified agent outputs and decision-support briefs for sample audit cases",
+  "total_cached": 48,
+  "eligible_cases": 36,
+  "ineligible_routine_cases": 12,
+  "records": [
+    {
+      "record_id": "tx_cache_300000",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "FRAUD_ALERT",
+      "reason": "R1_HIGH_RISK",
+      "p": 0.92,
+      "u": 0.08,
+      "u2": 0.06,
+      "n": 5.0,
+      "input_hash": "a0640fb59b8b7f40eeacd90b9ba2b67d92dc2a441956087af7a5106b465f1722",
+      "output_hash": "14eabedce77bae4afcd906f9bf2e4aba09cb4ab014e416e8cc24733921672f04",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.92,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.08,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "FRAUD_ALERT",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300000 evaluated with calibrated fraud risk p=0.9200.",
+        "Ensemble disagreement across members is u=0.0800.",
+        "Deterministic triage assigned action 'FRAUD_ALERT' with reason code 'R1_HIGH_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.648576+00:00"
+    },
+    {
+      "record_id": "tx_cache_300001",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "FRAUD_ALERT",
+      "reason": "R1_HIGH_RISK",
+      "p": 0.86,
+      "u": 0.12,
+      "u2": 0.09,
+      "n": 5.0,
+      "input_hash": "be26949ee15b04b9cd4f048dd620e479b4c3f48be1d3a42e7a49e778c7d0fefa",
+      "output_hash": "cc0c144681e326192e4194e88f99c8c336375ab5fdd5e47162a7f98814b2a411",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.86,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.12,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "FRAUD_ALERT",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300001 evaluated with calibrated fraud risk p=0.8600.",
+        "Ensemble disagreement across members is u=0.1200.",
+        "Deterministic triage assigned action 'FRAUD_ALERT' with reason code 'R1_HIGH_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.649439+00:00"
+    },
+    {
+      "record_id": "tx_cache_300002",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "MANUAL_REVIEW",
+      "reason": "R2_INTERMEDIATE_RISK",
+      "p": 0.54,
+      "u": 0.15,
+      "u2": 0.11,
+      "n": 5.0,
+      "input_hash": "17adaca709e1ae50cf28ece01bcd723b96fd07d5b13d67683951929fc1a452bd",
+      "output_hash": "eca3d9322cf26c0759ee907d2c2de1b41802f1869f1a379240f9d6876c84ae80",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.54,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.15,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "MANUAL_REVIEW",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300002 evaluated with calibrated fraud risk p=0.5400.",
+        "Ensemble disagreement across members is u=0.1500.",
+        "Deterministic triage assigned action 'MANUAL_REVIEW' with reason code 'R2_INTERMEDIATE_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.649579+00:00"
+    },
+    {
+      "record_id": "tx_cache_300003",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "MANUAL_REVIEW",
+      "reason": "R3_MODEL_DISAGREEMENT",
+      "p": 0.42,
+      "u": 0.28,
+      "u2": 0.22,
+      "n": 5.0,
+      "input_hash": "670629cf4cb36255914fd8471a0c540c91e7712cc7d4b4f90f13ece6974bd7f3",
+      "output_hash": "e8bb423e366bfc58987e2c394073b43d54d993448223d2f3c8f98942d13267b1",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.42,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.28,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "MANUAL_REVIEW",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300003 evaluated with calibrated fraud risk p=0.4200.",
+        "Ensemble disagreement across members is u=0.2800.",
+        "Deterministic triage assigned action 'MANUAL_REVIEW' with reason code 'R3_MODEL_DISAGREEMENT'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.649693+00:00"
+    },
+    {
+      "record_id": "tx_cache_300004",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "HELD",
+      "reason": "R6_QUEUE_CAPACITY",
+      "p": 0.65,
+      "u": 0.1,
+      "u2": 0.07,
+      "n": 5.0,
+      "input_hash": "effcf0c68dfd706eabac8662b29bc62c8cfa26c6bf1f792aec6e8f9b0faa16c3",
+      "output_hash": "acf944bdc39a38a392d1b9cf4f8324b6212542f024d50b120dfc04a4194edaf2",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.65,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.1,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "HELD",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300004 evaluated with calibrated fraud risk p=0.6500.",
+        "Ensemble disagreement across members is u=0.1000.",
+        "Deterministic triage assigned action 'HELD' with reason code 'R6_QUEUE_CAPACITY'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.649812+00:00"
+    },
+    {
+      "record_id": "tx_cache_300005",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "DEFERRED",
+      "reason": "R6_QUEUE_CAPACITY",
+      "p": 0.48,
+      "u": 0.14,
+      "u2": 0.1,
+      "n": 5.0,
+      "input_hash": "0a7a4d33b3ba39f68a754982606b04acb967ef9243380b75269a37bbfdcde267",
+      "output_hash": "8149366e7d0cd3f25cd9456dc234eea9823d2b86fc0528fe7295780ec253e6aa",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.48,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.14,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "DEFERRED",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300005 evaluated with calibrated fraud risk p=0.4800.",
+        "Ensemble disagreement across members is u=0.1400.",
+        "Deterministic triage assigned action 'DEFERRED' with reason code 'R6_QUEUE_CAPACITY'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.649913+00:00"
+    },
+    {
+      "record_id": "tx_cache_300006",
+      "agent_id": "none",
+      "provider": "none",
+      "execution_mode": "supervisor_skipped",
+      "status": "ineligible_routine",
+      "action": "ROUTINE",
+      "reason": "R5_LOW_RISK_RELIABLE",
+      "p": 0.02,
+      "u": 0.01,
+      "u2": 0.01,
+      "n": 5.0,
+      "input_hash": null,
+      "output_hash": null,
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 0,
+      "verified_claims": [],
+      "verified_statements": [
+        "ROUTINE auto-cleared case: ineligible for agent dispatch."
+      ],
+      "timestamp": null
+    },
+    {
+      "record_id": "tx_cache_300007",
+      "agent_id": "none",
+      "provider": "none",
+      "execution_mode": "supervisor_skipped",
+      "status": "ineligible_routine",
+      "action": "ROUTINE",
+      "reason": "R5_LOW_RISK_RELIABLE",
+      "p": 0.05,
+      "u": 0.02,
+      "u2": 0.01,
+      "n": 5.0,
+      "input_hash": null,
+      "output_hash": null,
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 0,
+      "verified_claims": [],
+      "verified_statements": [
+        "ROUTINE auto-cleared case: ineligible for agent dispatch."
+      ],
+      "timestamp": null
+    },
+    {
+      "record_id": "tx_cache_300008",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "FRAUD_ALERT",
+      "reason": "R1_HIGH_RISK",
+      "p": 0.92,
+      "u": 0.08,
+      "u2": 0.06,
+      "n": 5.0,
+      "input_hash": "184ce8a0d703ae65664b09524cbbff1d863ff2141e3b6705dd07dc6ed512cbb7",
+      "output_hash": "14eabedce77bae4afcd906f9bf2e4aba09cb4ab014e416e8cc24733921672f04",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.92,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.08,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "FRAUD_ALERT",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300008 evaluated with calibrated fraud risk p=0.9200.",
+        "Ensemble disagreement across members is u=0.0800.",
+        "Deterministic triage assigned action 'FRAUD_ALERT' with reason code 'R1_HIGH_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.650049+00:00"
+    },
+    {
+      "record_id": "tx_cache_300009",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "FRAUD_ALERT",
+      "reason": "R1_HIGH_RISK",
+      "p": 0.86,
+      "u": 0.12,
+      "u2": 0.09,
+      "n": 5.0,
+      "input_hash": "88c7e03498cd4b2f4ad0a4381c97645dfabcf7fda54887fda8a56cd16ea3eafd",
+      "output_hash": "cc0c144681e326192e4194e88f99c8c336375ab5fdd5e47162a7f98814b2a411",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.86,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.12,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "FRAUD_ALERT",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300009 evaluated with calibrated fraud risk p=0.8600.",
+        "Ensemble disagreement across members is u=0.1200.",
+        "Deterministic triage assigned action 'FRAUD_ALERT' with reason code 'R1_HIGH_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.650153+00:00"
+    },
+    {
+      "record_id": "tx_cache_300010",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "MANUAL_REVIEW",
+      "reason": "R2_INTERMEDIATE_RISK",
+      "p": 0.54,
+      "u": 0.15,
+      "u2": 0.11,
+      "n": 5.0,
+      "input_hash": "4dc0fff59840c27e035747ee23cbf2c7796b2ebecbebfe8b43ec58f1f5cd62f6",
+      "output_hash": "eca3d9322cf26c0759ee907d2c2de1b41802f1869f1a379240f9d6876c84ae80",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.54,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.15,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "MANUAL_REVIEW",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300010 evaluated with calibrated fraud risk p=0.5400.",
+        "Ensemble disagreement across members is u=0.1500.",
+        "Deterministic triage assigned action 'MANUAL_REVIEW' with reason code 'R2_INTERMEDIATE_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.650260+00:00"
+    },
+    {
+      "record_id": "tx_cache_300011",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "MANUAL_REVIEW",
+      "reason": "R3_MODEL_DISAGREEMENT",
+      "p": 0.42,
+      "u": 0.28,
+      "u2": 0.22,
+      "n": 5.0,
+      "input_hash": "9ba6b677b92447cceb048dbcd771741b91e27a36dbaa18e7f660a661cc9922f5",
+      "output_hash": "e8bb423e366bfc58987e2c394073b43d54d993448223d2f3c8f98942d13267b1",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.42,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.28,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "MANUAL_REVIEW",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300011 evaluated with calibrated fraud risk p=0.4200.",
+        "Ensemble disagreement across members is u=0.2800.",
+        "Deterministic triage assigned action 'MANUAL_REVIEW' with reason code 'R3_MODEL_DISAGREEMENT'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.650354+00:00"
+    },
+    {
+      "record_id": "tx_cache_300012",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "HELD",
+      "reason": "R6_QUEUE_CAPACITY",
+      "p": 0.65,
+      "u": 0.1,
+      "u2": 0.07,
+      "n": 5.0,
+      "input_hash": "2ecfe4c5dada9fc34c68e3b5bdbec497fe1ef84a1478bb276e804822bf62f4f1",
+      "output_hash": "acf944bdc39a38a392d1b9cf4f8324b6212542f024d50b120dfc04a4194edaf2",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.65,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.1,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "HELD",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300012 evaluated with calibrated fraud risk p=0.6500.",
+        "Ensemble disagreement across members is u=0.1000.",
+        "Deterministic triage assigned action 'HELD' with reason code 'R6_QUEUE_CAPACITY'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.650448+00:00"
+    },
+    {
+      "record_id": "tx_cache_300013",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "DEFERRED",
+      "reason": "R6_QUEUE_CAPACITY",
+      "p": 0.48,
+      "u": 0.14,
+      "u2": 0.1,
+      "n": 5.0,
+      "input_hash": "2c7e8237f3f05679fa609f3acdc4aef85a7dbf65e6b4b59db60375392c5e74fe",
+      "output_hash": "8149366e7d0cd3f25cd9456dc234eea9823d2b86fc0528fe7295780ec253e6aa",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.48,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.14,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "DEFERRED",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300013 evaluated with calibrated fraud risk p=0.4800.",
+        "Ensemble disagreement across members is u=0.1400.",
+        "Deterministic triage assigned action 'DEFERRED' with reason code 'R6_QUEUE_CAPACITY'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.650541+00:00"
+    },
+    {
+      "record_id": "tx_cache_300014",
+      "agent_id": "none",
+      "provider": "none",
+      "execution_mode": "supervisor_skipped",
+      "status": "ineligible_routine",
+      "action": "ROUTINE",
+      "reason": "R5_LOW_RISK_RELIABLE",
+      "p": 0.02,
+      "u": 0.01,
+      "u2": 0.01,
+      "n": 5.0,
+      "input_hash": null,
+      "output_hash": null,
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 0,
+      "verified_claims": [],
+      "verified_statements": [
+        "ROUTINE auto-cleared case: ineligible for agent dispatch."
+      ],
+      "timestamp": null
+    },
+    {
+      "record_id": "tx_cache_300015",
+      "agent_id": "none",
+      "provider": "none",
+      "execution_mode": "supervisor_skipped",
+      "status": "ineligible_routine",
+      "action": "ROUTINE",
+      "reason": "R5_LOW_RISK_RELIABLE",
+      "p": 0.05,
+      "u": 0.02,
+      "u2": 0.01,
+      "n": 5.0,
+      "input_hash": null,
+      "output_hash": null,
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 0,
+      "verified_claims": [],
+      "verified_statements": [
+        "ROUTINE auto-cleared case: ineligible for agent dispatch."
+      ],
+      "timestamp": null
+    },
+    {
+      "record_id": "tx_cache_300016",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "FRAUD_ALERT",
+      "reason": "R1_HIGH_RISK",
+      "p": 0.92,
+      "u": 0.08,
+      "u2": 0.06,
+      "n": 5.0,
+      "input_hash": "c88246061c54276f4853f5a6e0dfe3fecb93ffc65e83c9ea6f661416ef7f8ef6",
+      "output_hash": "14eabedce77bae4afcd906f9bf2e4aba09cb4ab014e416e8cc24733921672f04",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.92,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.08,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "FRAUD_ALERT",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300016 evaluated with calibrated fraud risk p=0.9200.",
+        "Ensemble disagreement across members is u=0.0800.",
+        "Deterministic triage assigned action 'FRAUD_ALERT' with reason code 'R1_HIGH_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.650666+00:00"
+    },
+    {
+      "record_id": "tx_cache_300017",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "FRAUD_ALERT",
+      "reason": "R1_HIGH_RISK",
+      "p": 0.86,
+      "u": 0.12,
+      "u2": 0.09,
+      "n": 5.0,
+      "input_hash": "d3d23f1445af1cf1336586ce9515895d3fcf383bf918ab216cd76807cbc44e28",
+      "output_hash": "cc0c144681e326192e4194e88f99c8c336375ab5fdd5e47162a7f98814b2a411",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.86,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.12,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "FRAUD_ALERT",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300017 evaluated with calibrated fraud risk p=0.8600.",
+        "Ensemble disagreement across members is u=0.1200.",
+        "Deterministic triage assigned action 'FRAUD_ALERT' with reason code 'R1_HIGH_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.650763+00:00"
+    },
+    {
+      "record_id": "tx_cache_300018",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "MANUAL_REVIEW",
+      "reason": "R2_INTERMEDIATE_RISK",
+      "p": 0.54,
+      "u": 0.15,
+      "u2": 0.11,
+      "n": 5.0,
+      "input_hash": "d90b24e278b13ad6852ddc7e636a53be5160ab4578c6a2c465f335ed98989908",
+      "output_hash": "eca3d9322cf26c0759ee907d2c2de1b41802f1869f1a379240f9d6876c84ae80",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.54,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.15,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "MANUAL_REVIEW",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300018 evaluated with calibrated fraud risk p=0.5400.",
+        "Ensemble disagreement across members is u=0.1500.",
+        "Deterministic triage assigned action 'MANUAL_REVIEW' with reason code 'R2_INTERMEDIATE_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.650861+00:00"
+    },
+    {
+      "record_id": "tx_cache_300019",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "MANUAL_REVIEW",
+      "reason": "R3_MODEL_DISAGREEMENT",
+      "p": 0.42,
+      "u": 0.28,
+      "u2": 0.22,
+      "n": 5.0,
+      "input_hash": "35f33127f544ab1ffb3ab9936ca52dda26444eb911591e6152b0895b81f58005",
+      "output_hash": "e8bb423e366bfc58987e2c394073b43d54d993448223d2f3c8f98942d13267b1",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.42,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.28,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "MANUAL_REVIEW",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300019 evaluated with calibrated fraud risk p=0.4200.",
+        "Ensemble disagreement across members is u=0.2800.",
+        "Deterministic triage assigned action 'MANUAL_REVIEW' with reason code 'R3_MODEL_DISAGREEMENT'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.650956+00:00"
+    },
+    {
+      "record_id": "tx_cache_300020",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "HELD",
+      "reason": "R6_QUEUE_CAPACITY",
+      "p": 0.65,
+      "u": 0.1,
+      "u2": 0.07,
+      "n": 5.0,
+      "input_hash": "3fdc39f1a0a2eabb7627b817e4c7feb7c2a5b63ca27f9395858ec8fd38251022",
+      "output_hash": "acf944bdc39a38a392d1b9cf4f8324b6212542f024d50b120dfc04a4194edaf2",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.65,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.1,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "HELD",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300020 evaluated with calibrated fraud risk p=0.6500.",
+        "Ensemble disagreement across members is u=0.1000.",
+        "Deterministic triage assigned action 'HELD' with reason code 'R6_QUEUE_CAPACITY'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.651059+00:00"
+    },
+    {
+      "record_id": "tx_cache_300021",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "DEFERRED",
+      "reason": "R6_QUEUE_CAPACITY",
+      "p": 0.48,
+      "u": 0.14,
+      "u2": 0.1,
+      "n": 5.0,
+      "input_hash": "ef7fae65e46bec1f3c2dbd1c89906ae408c9a47f08a09b284cc7db2ade3c7e72",
+      "output_hash": "8149366e7d0cd3f25cd9456dc234eea9823d2b86fc0528fe7295780ec253e6aa",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.48,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.14,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "DEFERRED",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300021 evaluated with calibrated fraud risk p=0.4800.",
+        "Ensemble disagreement across members is u=0.1400.",
+        "Deterministic triage assigned action 'DEFERRED' with reason code 'R6_QUEUE_CAPACITY'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.651163+00:00"
+    },
+    {
+      "record_id": "tx_cache_300022",
+      "agent_id": "none",
+      "provider": "none",
+      "execution_mode": "supervisor_skipped",
+      "status": "ineligible_routine",
+      "action": "ROUTINE",
+      "reason": "R5_LOW_RISK_RELIABLE",
+      "p": 0.02,
+      "u": 0.01,
+      "u2": 0.01,
+      "n": 5.0,
+      "input_hash": null,
+      "output_hash": null,
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 0,
+      "verified_claims": [],
+      "verified_statements": [
+        "ROUTINE auto-cleared case: ineligible for agent dispatch."
+      ],
+      "timestamp": null
+    },
+    {
+      "record_id": "tx_cache_300023",
+      "agent_id": "none",
+      "provider": "none",
+      "execution_mode": "supervisor_skipped",
+      "status": "ineligible_routine",
+      "action": "ROUTINE",
+      "reason": "R5_LOW_RISK_RELIABLE",
+      "p": 0.05,
+      "u": 0.02,
+      "u2": 0.01,
+      "n": 5.0,
+      "input_hash": null,
+      "output_hash": null,
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 0,
+      "verified_claims": [],
+      "verified_statements": [
+        "ROUTINE auto-cleared case: ineligible for agent dispatch."
+      ],
+      "timestamp": null
+    },
+    {
+      "record_id": "tx_cache_300024",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "FRAUD_ALERT",
+      "reason": "R1_HIGH_RISK",
+      "p": 0.92,
+      "u": 0.08,
+      "u2": 0.06,
+      "n": 5.0,
+      "input_hash": "661d5af7b70c49974ce6b7b0c728037fbe940790abc04dcb5e51b4c0ff699643",
+      "output_hash": "14eabedce77bae4afcd906f9bf2e4aba09cb4ab014e416e8cc24733921672f04",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.92,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.08,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "FRAUD_ALERT",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300024 evaluated with calibrated fraud risk p=0.9200.",
+        "Ensemble disagreement across members is u=0.0800.",
+        "Deterministic triage assigned action 'FRAUD_ALERT' with reason code 'R1_HIGH_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.651292+00:00"
+    },
+    {
+      "record_id": "tx_cache_300025",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "FRAUD_ALERT",
+      "reason": "R1_HIGH_RISK",
+      "p": 0.86,
+      "u": 0.12,
+      "u2": 0.09,
+      "n": 5.0,
+      "input_hash": "938c247e6ea25fd73043e606641e685eff82a752554ad29f7ae3e1021b515500",
+      "output_hash": "cc0c144681e326192e4194e88f99c8c336375ab5fdd5e47162a7f98814b2a411",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.86,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.12,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "FRAUD_ALERT",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300025 evaluated with calibrated fraud risk p=0.8600.",
+        "Ensemble disagreement across members is u=0.1200.",
+        "Deterministic triage assigned action 'FRAUD_ALERT' with reason code 'R1_HIGH_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.651393+00:00"
+    },
+    {
+      "record_id": "tx_cache_300026",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "MANUAL_REVIEW",
+      "reason": "R2_INTERMEDIATE_RISK",
+      "p": 0.54,
+      "u": 0.15,
+      "u2": 0.11,
+      "n": 5.0,
+      "input_hash": "6a1d218dcecef3051e40cc10aebc056ceca36b0e7d22b70db1d48b3ec269924b",
+      "output_hash": "eca3d9322cf26c0759ee907d2c2de1b41802f1869f1a379240f9d6876c84ae80",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.54,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.15,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "MANUAL_REVIEW",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300026 evaluated with calibrated fraud risk p=0.5400.",
+        "Ensemble disagreement across members is u=0.1500.",
+        "Deterministic triage assigned action 'MANUAL_REVIEW' with reason code 'R2_INTERMEDIATE_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.651497+00:00"
+    },
+    {
+      "record_id": "tx_cache_300027",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "MANUAL_REVIEW",
+      "reason": "R3_MODEL_DISAGREEMENT",
+      "p": 0.42,
+      "u": 0.28,
+      "u2": 0.22,
+      "n": 5.0,
+      "input_hash": "6be587dc37c38a36ba2a4080bc7d924921fcb5d6c65385670437a3f8031a23bd",
+      "output_hash": "e8bb423e366bfc58987e2c394073b43d54d993448223d2f3c8f98942d13267b1",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.42,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.28,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "MANUAL_REVIEW",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300027 evaluated with calibrated fraud risk p=0.4200.",
+        "Ensemble disagreement across members is u=0.2800.",
+        "Deterministic triage assigned action 'MANUAL_REVIEW' with reason code 'R3_MODEL_DISAGREEMENT'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.651603+00:00"
+    },
+    {
+      "record_id": "tx_cache_300028",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "HELD",
+      "reason": "R6_QUEUE_CAPACITY",
+      "p": 0.65,
+      "u": 0.1,
+      "u2": 0.07,
+      "n": 5.0,
+      "input_hash": "d6cb1e38faa954dc34fb12e5c8adc6ceee1f81b4cb53c918daa390d0f7749d6c",
+      "output_hash": "acf944bdc39a38a392d1b9cf4f8324b6212542f024d50b120dfc04a4194edaf2",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.65,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.1,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "HELD",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300028 evaluated with calibrated fraud risk p=0.6500.",
+        "Ensemble disagreement across members is u=0.1000.",
+        "Deterministic triage assigned action 'HELD' with reason code 'R6_QUEUE_CAPACITY'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.651709+00:00"
+    },
+    {
+      "record_id": "tx_cache_300029",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "DEFERRED",
+      "reason": "R6_QUEUE_CAPACITY",
+      "p": 0.48,
+      "u": 0.14,
+      "u2": 0.1,
+      "n": 5.0,
+      "input_hash": "9567e7500de0240c7d8dac7f1a68f5fd0c0dc60fa958251142ab872c8d3fe4b1",
+      "output_hash": "8149366e7d0cd3f25cd9456dc234eea9823d2b86fc0528fe7295780ec253e6aa",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.48,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.14,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "DEFERRED",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300029 evaluated with calibrated fraud risk p=0.4800.",
+        "Ensemble disagreement across members is u=0.1400.",
+        "Deterministic triage assigned action 'DEFERRED' with reason code 'R6_QUEUE_CAPACITY'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.651810+00:00"
+    },
+    {
+      "record_id": "tx_cache_300030",
+      "agent_id": "none",
+      "provider": "none",
+      "execution_mode": "supervisor_skipped",
+      "status": "ineligible_routine",
+      "action": "ROUTINE",
+      "reason": "R5_LOW_RISK_RELIABLE",
+      "p": 0.02,
+      "u": 0.01,
+      "u2": 0.01,
+      "n": 5.0,
+      "input_hash": null,
+      "output_hash": null,
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 0,
+      "verified_claims": [],
+      "verified_statements": [
+        "ROUTINE auto-cleared case: ineligible for agent dispatch."
+      ],
+      "timestamp": null
+    },
+    {
+      "record_id": "tx_cache_300031",
+      "agent_id": "none",
+      "provider": "none",
+      "execution_mode": "supervisor_skipped",
+      "status": "ineligible_routine",
+      "action": "ROUTINE",
+      "reason": "R5_LOW_RISK_RELIABLE",
+      "p": 0.05,
+      "u": 0.02,
+      "u2": 0.01,
+      "n": 5.0,
+      "input_hash": null,
+      "output_hash": null,
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 0,
+      "verified_claims": [],
+      "verified_statements": [
+        "ROUTINE auto-cleared case: ineligible for agent dispatch."
+      ],
+      "timestamp": null
+    },
+    {
+      "record_id": "tx_cache_300032",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "FRAUD_ALERT",
+      "reason": "R1_HIGH_RISK",
+      "p": 0.92,
+      "u": 0.08,
+      "u2": 0.06,
+      "n": 5.0,
+      "input_hash": "3e72902807cbeedc97015824fb4ff60d20bfd2fb6d604af8ad48d710288ba1ba",
+      "output_hash": "14eabedce77bae4afcd906f9bf2e4aba09cb4ab014e416e8cc24733921672f04",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.92,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.08,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "FRAUD_ALERT",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300032 evaluated with calibrated fraud risk p=0.9200.",
+        "Ensemble disagreement across members is u=0.0800.",
+        "Deterministic triage assigned action 'FRAUD_ALERT' with reason code 'R1_HIGH_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.651938+00:00"
+    },
+    {
+      "record_id": "tx_cache_300033",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "FRAUD_ALERT",
+      "reason": "R1_HIGH_RISK",
+      "p": 0.86,
+      "u": 0.12,
+      "u2": 0.09,
+      "n": 5.0,
+      "input_hash": "5e177c9379cf16e170b72be005d383d2cba0581c57478c4131e9e9e34f0c51b1",
+      "output_hash": "cc0c144681e326192e4194e88f99c8c336375ab5fdd5e47162a7f98814b2a411",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.86,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.12,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "FRAUD_ALERT",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300033 evaluated with calibrated fraud risk p=0.8600.",
+        "Ensemble disagreement across members is u=0.1200.",
+        "Deterministic triage assigned action 'FRAUD_ALERT' with reason code 'R1_HIGH_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.652124+00:00"
+    },
+    {
+      "record_id": "tx_cache_300034",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "MANUAL_REVIEW",
+      "reason": "R2_INTERMEDIATE_RISK",
+      "p": 0.54,
+      "u": 0.15,
+      "u2": 0.11,
+      "n": 5.0,
+      "input_hash": "7d24e06634fdb2613ef04e2768b293808248d13fa6a9d02759b0f9ea8a69c09c",
+      "output_hash": "eca3d9322cf26c0759ee907d2c2de1b41802f1869f1a379240f9d6876c84ae80",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.54,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.15,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "MANUAL_REVIEW",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300034 evaluated with calibrated fraud risk p=0.5400.",
+        "Ensemble disagreement across members is u=0.1500.",
+        "Deterministic triage assigned action 'MANUAL_REVIEW' with reason code 'R2_INTERMEDIATE_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.652387+00:00"
+    },
+    {
+      "record_id": "tx_cache_300035",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "MANUAL_REVIEW",
+      "reason": "R3_MODEL_DISAGREEMENT",
+      "p": 0.42,
+      "u": 0.28,
+      "u2": 0.22,
+      "n": 5.0,
+      "input_hash": "a6a6791779e95d0aa184c05ca8e5d52866f0d1c15c1a3676a0bebae289c4e54e",
+      "output_hash": "e8bb423e366bfc58987e2c394073b43d54d993448223d2f3c8f98942d13267b1",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.42,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.28,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "MANUAL_REVIEW",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300035 evaluated with calibrated fraud risk p=0.4200.",
+        "Ensemble disagreement across members is u=0.2800.",
+        "Deterministic triage assigned action 'MANUAL_REVIEW' with reason code 'R3_MODEL_DISAGREEMENT'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.652528+00:00"
+    },
+    {
+      "record_id": "tx_cache_300036",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "HELD",
+      "reason": "R6_QUEUE_CAPACITY",
+      "p": 0.65,
+      "u": 0.1,
+      "u2": 0.07,
+      "n": 5.0,
+      "input_hash": "56fedaaf8a11fe81ac7307fc42de20d725705fe1798818c23e2af5bdea22445c",
+      "output_hash": "acf944bdc39a38a392d1b9cf4f8324b6212542f024d50b120dfc04a4194edaf2",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.65,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.1,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "HELD",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300036 evaluated with calibrated fraud risk p=0.6500.",
+        "Ensemble disagreement across members is u=0.1000.",
+        "Deterministic triage assigned action 'HELD' with reason code 'R6_QUEUE_CAPACITY'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.652744+00:00"
+    },
+    {
+      "record_id": "tx_cache_300037",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "DEFERRED",
+      "reason": "R6_QUEUE_CAPACITY",
+      "p": 0.48,
+      "u": 0.14,
+      "u2": 0.1,
+      "n": 5.0,
+      "input_hash": "ad438f0ecf5ad98d3cb72d756f6e3534c6634f1e4c013f8f031493c016d964be",
+      "output_hash": "8149366e7d0cd3f25cd9456dc234eea9823d2b86fc0528fe7295780ec253e6aa",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.48,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.14,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "DEFERRED",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300037 evaluated with calibrated fraud risk p=0.4800.",
+        "Ensemble disagreement across members is u=0.1400.",
+        "Deterministic triage assigned action 'DEFERRED' with reason code 'R6_QUEUE_CAPACITY'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.652892+00:00"
+    },
+    {
+      "record_id": "tx_cache_300038",
+      "agent_id": "none",
+      "provider": "none",
+      "execution_mode": "supervisor_skipped",
+      "status": "ineligible_routine",
+      "action": "ROUTINE",
+      "reason": "R5_LOW_RISK_RELIABLE",
+      "p": 0.02,
+      "u": 0.01,
+      "u2": 0.01,
+      "n": 5.0,
+      "input_hash": null,
+      "output_hash": null,
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 0,
+      "verified_claims": [],
+      "verified_statements": [
+        "ROUTINE auto-cleared case: ineligible for agent dispatch."
+      ],
+      "timestamp": null
+    },
+    {
+      "record_id": "tx_cache_300039",
+      "agent_id": "none",
+      "provider": "none",
+      "execution_mode": "supervisor_skipped",
+      "status": "ineligible_routine",
+      "action": "ROUTINE",
+      "reason": "R5_LOW_RISK_RELIABLE",
+      "p": 0.05,
+      "u": 0.02,
+      "u2": 0.01,
+      "n": 5.0,
+      "input_hash": null,
+      "output_hash": null,
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 0,
+      "verified_claims": [],
+      "verified_statements": [
+        "ROUTINE auto-cleared case: ineligible for agent dispatch."
+      ],
+      "timestamp": null
+    },
+    {
+      "record_id": "tx_cache_300040",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "FRAUD_ALERT",
+      "reason": "R1_HIGH_RISK",
+      "p": 0.92,
+      "u": 0.08,
+      "u2": 0.06,
+      "n": 5.0,
+      "input_hash": "763cc4963c54e98269af431877ad2bec90eefefc4aee25135eff9cab66350c8d",
+      "output_hash": "14eabedce77bae4afcd906f9bf2e4aba09cb4ab014e416e8cc24733921672f04",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.92,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.08,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "FRAUD_ALERT",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300040 evaluated with calibrated fraud risk p=0.9200.",
+        "Ensemble disagreement across members is u=0.0800.",
+        "Deterministic triage assigned action 'FRAUD_ALERT' with reason code 'R1_HIGH_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.653044+00:00"
+    },
+    {
+      "record_id": "tx_cache_300041",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "FRAUD_ALERT",
+      "reason": "R1_HIGH_RISK",
+      "p": 0.86,
+      "u": 0.12,
+      "u2": 0.09,
+      "n": 5.0,
+      "input_hash": "5931dfb2d97ab2c8c39372931fe7c77203de03a5c346d55c215e3866d9aded1b",
+      "output_hash": "cc0c144681e326192e4194e88f99c8c336375ab5fdd5e47162a7f98814b2a411",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.86,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.12,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "FRAUD_ALERT",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300041 evaluated with calibrated fraud risk p=0.8600.",
+        "Ensemble disagreement across members is u=0.1200.",
+        "Deterministic triage assigned action 'FRAUD_ALERT' with reason code 'R1_HIGH_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.653169+00:00"
+    },
+    {
+      "record_id": "tx_cache_300042",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "MANUAL_REVIEW",
+      "reason": "R2_INTERMEDIATE_RISK",
+      "p": 0.54,
+      "u": 0.15,
+      "u2": 0.11,
+      "n": 5.0,
+      "input_hash": "be009cea01fbe8ef11822896715b3657f3ce057f85343058e157023c158d41e0",
+      "output_hash": "eca3d9322cf26c0759ee907d2c2de1b41802f1869f1a379240f9d6876c84ae80",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.54,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.15,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "MANUAL_REVIEW",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300042 evaluated with calibrated fraud risk p=0.5400.",
+        "Ensemble disagreement across members is u=0.1500.",
+        "Deterministic triage assigned action 'MANUAL_REVIEW' with reason code 'R2_INTERMEDIATE_RISK'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.653286+00:00"
+    },
+    {
+      "record_id": "tx_cache_300043",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "MANUAL_REVIEW",
+      "reason": "R3_MODEL_DISAGREEMENT",
+      "p": 0.42,
+      "u": 0.28,
+      "u2": 0.22,
+      "n": 5.0,
+      "input_hash": "fa3507ffa77c3375f70771e83a73238f94d35e416660cabefff7c08a55161d0d",
+      "output_hash": "e8bb423e366bfc58987e2c394073b43d54d993448223d2f3c8f98942d13267b1",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.42,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.28,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "MANUAL_REVIEW",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300043 evaluated with calibrated fraud risk p=0.4200.",
+        "Ensemble disagreement across members is u=0.2800.",
+        "Deterministic triage assigned action 'MANUAL_REVIEW' with reason code 'R3_MODEL_DISAGREEMENT'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.653416+00:00"
+    },
+    {
+      "record_id": "tx_cache_300044",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "HELD",
+      "reason": "R6_QUEUE_CAPACITY",
+      "p": 0.65,
+      "u": 0.1,
+      "u2": 0.07,
+      "n": 5.0,
+      "input_hash": "c35a39039683ba111b0e7132f0b28d5f122ae0ba6dc97b8cb2a2347ba4f0a3e5",
+      "output_hash": "acf944bdc39a38a392d1b9cf4f8324b6212542f024d50b120dfc04a4194edaf2",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.65,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.1,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "HELD",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300044 evaluated with calibrated fraud risk p=0.6500.",
+        "Ensemble disagreement across members is u=0.1000.",
+        "Deterministic triage assigned action 'HELD' with reason code 'R6_QUEUE_CAPACITY'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.653541+00:00"
+    },
+    {
+      "record_id": "tx_cache_300045",
+      "agent_id": "case_copilot",
+      "provider": "offline_mock",
+      "execution_mode": "deterministic_offline",
+      "status": "ok",
+      "action": "DEFERRED",
+      "reason": "R6_QUEUE_CAPACITY",
+      "p": 0.48,
+      "u": 0.14,
+      "u2": 0.1,
+      "n": 5.0,
+      "input_hash": "332938c52c7ed12be1f30034dba3f61747883a27c9545b328a1187934b57f360",
+      "output_hash": "8149366e7d0cd3f25cd9456dc234eea9823d2b86fc0528fe7295780ec253e6aa",
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 4,
+      "verified_claims": [
+        {
+          "field": "p",
+          "operator": "eq",
+          "value": 0.48,
+          "template_id": "T1_CALIBRATED_RISK"
+        },
+        {
+          "field": "u",
+          "operator": "eq",
+          "value": 0.14,
+          "template_id": "T2_MODEL_DISAGREEMENT"
+        },
+        {
+          "field": "action",
+          "operator": "eq",
+          "value": "DEFERRED",
+          "template_id": "T3_ROUTING_ACTION"
+        },
+        {
+          "field": "cfg_hash",
+          "operator": "eq",
+          "value": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+          "template_id": "T8_RECORD_PROVENANCE"
+        }
+      ],
+      "verified_statements": [
+        "Case tx_cache_300045 evaluated with calibrated fraud risk p=0.4800.",
+        "Ensemble disagreement across members is u=0.1400.",
+        "Deterministic triage assigned action 'DEFERRED' with reason code 'R6_QUEUE_CAPACITY'.",
+        "Audit provenance verified against config hash e73a0e02 and split hash 88d73a15."
+      ],
+      "timestamp": "2026-10-17T17:15:12.653973+00:00"
+    },
+    {
+      "record_id": "tx_cache_300046",
+      "agent_id": "none",
+      "provider": "none",
+      "execution_mode": "supervisor_skipped",
+      "status": "ineligible_routine",
+      "action": "ROUTINE",
+      "reason": "R5_LOW_RISK_RELIABLE",
+      "p": 0.02,
+      "u": 0.01,
+      "u2": 0.01,
+      "n": 5.0,
+      "input_hash": null,
+      "output_hash": null,
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 0,
+      "verified_claims": [],
+      "verified_statements": [
+        "ROUTINE auto-cleared case: ineligible for agent dispatch."
+      ],
+      "timestamp": null
+    },
+    {
+      "record_id": "tx_cache_300047",
+      "agent_id": "none",
+      "provider": "none",
+      "execution_mode": "supervisor_skipped",
+      "status": "ineligible_routine",
+      "action": "ROUTINE",
+      "reason": "R5_LOW_RISK_RELIABLE",
+      "p": 0.05,
+      "u": 0.02,
+      "u2": 0.01,
+      "n": 5.0,
+      "input_hash": null,
+      "output_hash": null,
+      "cfg_hash": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1",
+      "claims_count": 0,
+      "verified_claims": [],
+      "verified_statements": [
+        "ROUTINE auto-cleared case: ineligible for agent dispatch."
+      ],
+      "timestamp": null
+    }
+  ]
+}

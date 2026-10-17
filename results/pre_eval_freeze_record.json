@@ -1,0 +1,84 @@
+{
+  "title": "SignalGate Gate G5 Pre-Evaluation Protocol and Model Freeze Record",
+  "created_at": "2026-10-17T16:53:00Z",
+  "evaluation_version": "SignalGate-G5-Eval-v1.0",
+  "provenance_statement": "Historical Gate G1 output already reported test-set baseline metrics in results/g1_baselines_report.json. That prior test-set look is explicitly documented and acknowledged. G5 is a frozen, controlled benchmark evaluation on immutable models and policies, NOT the first-ever test look and NOT a tuning exercise. No model, hyperparameter, threshold, or policy weight was tuned against test labels.",
+  "frozen_system": {
+    "base_estimator": "HistGradientBoostingClassifier(max_iter=60, class_weight='balanced', early_stopping=False)",
+    "ensemble_architecture": "EraBaggedHeterogeneousEnsemble (5 chronological era members: omitting era 0, 1, 2, 3, 4)",
+    "baseline_model_b2": "HistGradientBoostingClassifier(max_iter=60, random_state=11, class_weight='balanced')",
+    "feature_preprocessing": "FeaturePipeline (391 features: 377 numerical with median imputation, 14 ordinal categoricals; fitted strictly on train partition)",
+    "calibration_method": "PlattCalibrator (sigmoid logistic regression fitted strictly on calibration partition, validation ECE = 0.0039)",
+    "candidate_policy": {
+      "name": "CandidateP5Policy",
+      "formula": "score(x) = p_calibrated(x) + lambda * u_signal(x)",
+      "disagreement_weight_lambda": 0.0,
+      "disagreement_signal": "u2",
+      "budget_multiple": 1.5,
+      "policy_config_hash": "10a2fd1f33ec388298f462d8390c8ca2e303d5c411be2643416322a8795b3c48"
+    }
+  },
+  "hashes": {
+    "config_yaml_sha256": "e73a0e02fbd5411928ee41a0c70d71584ddc3a17ef9fc8711f318b99baed7f6e",
+    "split_manifest_file_sha256": "12f6e032bf87a07ee38d16fcb57f67dac17e85f81aa61a0048ab89c0f8d2ce19",
+    "train_split_hash": "ee8c38fd7e8b2af1b93a7824fd80f59c7811e5ce2ac1651500d51bf6e2e1f53a",
+    "calibration_split_hash": "a1880e4f36558c33d77d0a1a2cf6b1dfe607a4983909364afff71ca84401e7bb",
+    "validation_split_hash": "f824d80aea2e20f72e4ed8f06e6d119c7572caf50cf304dfb4224e8d990e7170",
+    "test_split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1"
+  },
+  "workload_and_budget": {
+    "primary_budget_multiple": 1.5,
+    "train_fraud_prevalence": 0.03383344057980831,
+    "official_workload_formula": "(FRAUD_ALERT + MANUAL_REVIEW) / N",
+    "deferred_treatment": "HELD/DEFERRED reported separately; never counted as reviewed or silently treated as ROUTINE."
+  },
+  "scenarios": {
+    "S0": {
+      "name": "Original Chronological Test Set",
+      "partition": "test",
+      "row_count": 118108,
+      "dt_min": 12192900,
+      "dt_max": 15811131,
+      "evidence_type": "measured real data"
+    },
+    "S1": {
+      "name": "Late-Period Chronological Test Scenario",
+      "partition": "test",
+      "filter": "TransactionDT >= 14800000",
+      "evidence_type": "measured real data"
+    },
+    "S2": {
+      "name": "Constructed Real-Data Shift (Validation Window Slice)",
+      "partition": "validation",
+      "filter": "TransactionDT >= 11315422",
+      "row_count": 29527,
+      "evidence_type": "measured real data"
+    },
+    "S3": {
+      "name": "Synthetic Perturbation Scenario",
+      "partition": "validation",
+      "random_seed": 42,
+      "perturbation": "Deterministic 1.15x scaling and Gaussian noise (scale=0.15*std)",
+      "row_count": 59054,
+      "evidence_type": "measured synthetic data"
+    }
+  },
+  "statistical_protocol": {
+    "bootstrap_resamples": 1000,
+    "random_seed": 42,
+    "confidence_level": 0.95,
+    "rule": "Paired resamples matching identical records; significant if ci_lower > 0"
+  },
+  "acceptance_criteria_rules": {
+    "AC1": "At least +2.0 percentage points recall improvement over B2 at the primary workload (1.5x), with 95% bootstrap CI lower bound > 0.",
+    "AC2": "Match B2 recall while touching at least 10% fewer transactions.",
+    "AC3": "Shift-robustness comparison across S0, S1, S2, S3 against baseline B2.",
+    "AC4": "At least 10% reduction in confident misses (fraudulent cases routed to ROUTINE).",
+    "AC5": "Single-row p95 latency <= 50.0 ms under documented conditions."
+  },
+  "artifacts_to_save": [
+    "results/pre_eval_freeze_record.json",
+    "results/results.json",
+    "docs/G5_Readiness_Report.md"
+  ]
+}

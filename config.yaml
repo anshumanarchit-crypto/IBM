@@ -37,6 +37,8 @@ thresholds: null
 acceptance:
   AC1_pp: 2.0
   AC2_reduction: 0.10
+  AC3_shift_robustness: 0.0
+  AC4_confident_miss_reduction: 0.10
   AC5_p95_ms: 50
 
 agent_acceptance:

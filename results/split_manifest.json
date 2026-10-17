@@ -1,0 +1,53 @@
+{
+  "total_rows": 590540,
+  "partitions": {
+    "train": {
+      "name": "train",
+      "start_idx": 0,
+      "end_idx": 212594,
+      "row_count": 354324,
+      "dt_min": 86400,
+      "dt_max": 8745772,
+      "fraud_count": 11988,
+      "non_fraud_count": 342336,
+      "prevalence": 0.03383344057980831,
+      "split_hash": "ee8c38fd7e8b2af1b93a7824fd80f59c7811e5ce2ac1651500d51bf6e2e1f53a"
+    },
+    "calibration": {
+      "name": "calibration",
+      "start_idx": 35432,
+      "end_idx": 41338,
+      "row_count": 59054,
+      "dt_min": 8745798,
+      "dt_max": 10437996,
+      "fraud_count": 2550,
+      "non_fraud_count": 56504,
+      "prevalence": 0.04318081755681241,
+      "split_hash": "a1880e4f36558c33d77d0a1a2cf6b1dfe607a4983909364afff71ca84401e7bb"
+    },
+    "validation": {
+      "name": "validation",
+      "start_idx": 41338,
+      "end_idx": 47243,
+      "row_count": 59054,
+      "dt_min": 10438003,
+      "dt_max": 12192842,
+      "fraud_count": 2061,
+      "non_fraud_count": 56993,
+      "prevalence": 0.034900260778270735,
+      "split_hash": "f824d80aea2e20f72e4ed8f06e6d119c7572caf50cf304dfb4224e8d990e7170"
+    },
+    "test": {
+      "name": "test",
+      "start_idx": 94486,
+      "end_idx": 118108,
+      "row_count": 118108,
+      "dt_min": 12192900,
+      "dt_max": 15811131,
+      "fraud_count": 4064,
+      "non_fraud_count": 114044,
+      "prevalence": 0.034409184813899145,
+      "split_hash": "88d73a15fc60f9badfedc4909ede017de45a99f6c58798d54ab9c1dff90690f1"
+    }
+  }
+}
