@@ -14,6 +14,7 @@ from __future__ import annotations
 import hashlib
 import json
 from datetime import datetime, timezone
+
 import numpy as np
 import pytest
 from pydantic import ValidationError
@@ -24,7 +25,6 @@ from agents.supervisor import AgentSupervisor
 from policy.p5_candidate import CandidateP5Policy, P5PolicyConfig
 from schemas.agent_view import AgentCaseView
 from schemas.contracts import Action, AgentRecord, AuditRecord, Claim, ReasonCode
-
 
 TEST_CFG_HASH = "a" * 64
 TEST_SPLIT_HASH = "b" * 64
@@ -365,3 +365,24 @@ def test_supervisor_routine_ineligibility():
     )
     assert not supervisor.is_eligible(routine_case)
     assert supervisor.dispatch(routine_case) is None
+
+
+def test_copilot_denies_provider_without_attestation(sample_case_view: AgentCaseView):
+    """Required attestation denies execution before the configured provider runs."""
+    provider_called = False
+
+    def provider(cv: AgentCaseView) -> list[Claim]:
+        nonlocal provider_called
+        provider_called = True
+        return []
+
+    copilot = CaseCopilot(
+        llm_provider=provider,
+        require_attestation=True,
+        attestation_evidence=None,
+    )
+
+    with pytest.raises(PermissionError, match="Attestation evidence is missing"):
+        copilot.generate_brief(sample_case_view)
+
+    assert provider_called is False

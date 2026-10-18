@@ -23,6 +23,11 @@ from typing import Any, Callable
 from agents.claim_verifier import ClaimVerifier
 from schemas.agent_view import AgentCaseView
 from schemas.contracts import AgentRecord, Claim
+from security.tee_policy import (
+    AttestationEvidence,
+    ExecutionAuthorization,
+    authorize_protected_execution,
+)
 
 
 def _canonical_bytes(obj: Any) -> bytes:
@@ -45,18 +50,31 @@ class CaseCopilot:
         verifier: ClaimVerifier | None = None,
         llm_provider: Callable[[AgentCaseView], list[Claim]] | None = None,
         timeout_seconds: float = 5.0,
+        require_attestation: bool = False,
+        attestation_evidence: AttestationEvidence | None = None,
     ) -> None:
         self.verifier = verifier or ClaimVerifier()
         self.llm_provider = llm_provider
         self.timeout_seconds = timeout_seconds
+        self.require_attestation = require_attestation
+        self.attestation_evidence = attestation_evidence
 
     def generate_brief(self, case_view: AgentCaseView) -> AgentRecord:
         """Generate a verified decision-support record for one case view."""
         # 1. Fail closed if input is not an AgentCaseView
         if not isinstance(case_view, AgentCaseView):
             raise TypeError(
-                f"Prohibited input: CaseCopilot requires AgentCaseView, got {type(case_view).__name__}"
+                "Prohibited input: CaseCopilot requires AgentCaseView, "
+                f"got {type(case_view).__name__}"
             )
+
+        # 2. Enforce configured attestation policy before invoking any provider.
+        authorization: ExecutionAuthorization = authorize_protected_execution(
+            self.attestation_evidence,
+            require_attestation=self.require_attestation,
+        )
+        if not authorization.allowed:
+            raise PermissionError(authorization.reason)
 
         # Compute input provenance hash
         input_hash = hashlib.sha256(_canonical_bytes(case_view)).hexdigest()
